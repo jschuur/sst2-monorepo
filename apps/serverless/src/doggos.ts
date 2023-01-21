@@ -6,7 +6,5 @@ const prisma = new PrismaClient();
 export const handler = ApiHandler(async (_evt) => {
   const doggos = await prisma.doggo.findMany();
 
-  return {
-    body: JSON.stringify({ doggos }, null, 2),
-  };
+  return JSON.stringify(doggos);
 });
