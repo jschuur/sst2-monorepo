@@ -1,0 +1,22 @@
+{
+  "name": "sst2-monorepo",
+  "version": "1.0.0",
+  "description": "SST2 monorepo experiment",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --stream -F './packages/*' dev",
+    "dev:sst": "pnpm -F './apps/serverless' dev",
+    "dev:site": "pnpm -F './apps/site' dev",
+    "build": "pnpm -F './packages/*' build",
+    "deploy:sst": "pnpm -F './apps/serverless' run deploy",
+    "postinstall": "pnpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  }
+}
