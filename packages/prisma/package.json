@@ -8,7 +8,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "generate:client": "prisma generate"
   },
   "keywords": [],
   "author": "",

@@ -9,8 +9,8 @@
     "dev:sst": "pnpm -F './apps/serverless' dev",
     "dev:site": "pnpm -F './apps/site' dev",
     "build": "pnpm -F './packages/*' build",
-    "deploy:sst": "pnpm -F './apps/serverless' run deploy",
-    "postinstall": "pnpm run build"
+    "deploy:sst": "pnpm -F './apps/serverless' deploy",
+    "postinstall": "pnpm -F './packages/prisma' generate:client && pnpm run build"
   },
   "keywords": [],
   "author": "",
