@@ -5,12 +5,12 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "pnpm --stream -F './packages/*' dev",
-    "dev:sst": "pnpm -F './apps/serverless' dev",
-    "dev:site": "pnpm -F './apps/site' dev",
-    "build": "pnpm -F './packages/*' build",
-    "deploy:sst": "pnpm -F './apps/serverless' deploy",
-    "postinstall": "pnpm -F './packages/prisma' generate:client && pnpm run build"
+    "dev": "pnpm --stream -F './packages/*' run dev",
+    "dev:sst": "pnpm -F './apps/serverless' run dev",
+    "dev:site": "pnpm -F './apps/site' run dev",
+    "build:packages": "pnpm -F './packages/*' run build",
+    "deploy:sst": "pnpm -F './apps/serverless' run deploy",
+    "generate:client": "pnpm -F './packages/prisma' run generate:client"
   },
   "keywords": [],
   "author": "",
