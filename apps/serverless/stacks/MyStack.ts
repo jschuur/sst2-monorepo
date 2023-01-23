@@ -34,6 +34,7 @@ export function API({ stack, app }: StackContext) {
 
       fs.copySync(from, to, {
         // Do not include binary files that aren't for AWS to save space
+        dereference: true,
         filter: (src: string) => {
           console.log(`File ${src}`);
           return !src.endsWith('so.node') || src.includes('rhel');
